@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RockPaperS Game</title>
+</head>
+
+<body>
+
+    <script>
+        
+        let playsc = 0;
+        let compsc = 0;
+
+        function computerPlay() {
+
+            let random = Math.floor(Math.random() * 3);
+            let sol;
+
+            if (random === 0) {
+
+                sol = "rock";
+
+            } else if (random === 1) {
+
+                sol = "paper";
+            } else {
+
+                sol = "scissors";
+            }
+
+            return sol;
+
+
+        }
+
+
+        function playRound(playerSelection, computerSelection) {
+
+
+            if (playerSelection === "rock" && computerSelection === "paper") {
+
+                compsc++;
+
+            } else if (playerSelection === "rock" && computerSelection === "scissors") {
+
+                playsc++;
+
+            } else if (playerSelection === computerSelection) {
+                playsc++;
+                compsc++;
+
+            } else if (playerSelection === "paper" && computerSelection === "rock") {
+
+                playsc++;
+
+            } else if (playerSelection === "paper" && computerSelection === "scissors") {
+
+                compsc++;
+
+            } else if (playerSelection === "scissors" && computerSelection === "rock") {
+
+                compsc++;
+
+
+            } else if (playerSelection === "scissors" && computerSelection === "paper") {
+                playsc++;
+
+            }
+
+        }
+
+
+        function game() {
+
+
+            for(let i =0; i<5; i++) {
+                
+            let playerSelection = prompt("Rock, paper or scissors?").toLowerCase();
+            let computerSelection = computerPlay();
+            
+            playRound(playerSelection, computerSelection); 
+                
+            }
+            
+            if (playsc > compsc) {
+
+                    console.log("You beat the computer!");
+                } else if (playsc === compsc) {
+
+                    console.log("Both drew!");
+
+                } else {
+
+                    console.log("Computers are better!")
+                }
+
+
+        }
+        
+        game();
+        
+        
+
+
+    </script>
+
+
+</body>
+
+</html>
