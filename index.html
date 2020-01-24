@@ -4,109 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <title>RockPaperS Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <script>
-        
-        let playsc = 0;
-        let compsc = 0;
+    <ul>
+        <li>
+            <h1>Rock Paper Scissors</h1>
+        </li>
 
-        function computerPlay() {
-
-            let random = Math.floor(Math.random() * 3);
-            let sol;
-
-            if (random === 0) {
-
-                sol = "rock";
-
-            } else if (random === 1) {
-
-                sol = "paper";
-            } else {
-
-                sol = "scissors";
-            }
-
-            return sol;
+    </ul>
 
 
-        }
+    <div class="images">
+
+        <img src="img/rock.png" alt="rock" id="rock">
+        <img src="img/paper.png" alt="paper" id="paper">
+        <img src="img/scissors.png" alt="scissors" id="scissors">
+
+    </div>
+
+    <div class="score">
+        <h3 id="playerScore">Player Score = 0</h3>
+        <h3 id="computerScore">Computer Score = 0</h3>
+    </div>
 
 
-        function playRound(playerSelection, computerSelection) {
 
 
-            if (playerSelection === "rock" && computerSelection === "paper") {
-
-                compsc++;
-
-            } else if (playerSelection === "rock" && computerSelection === "scissors") {
-
-                playsc++;
-
-            } else if (playerSelection === computerSelection) {
-                playsc++;
-                compsc++;
-
-            } else if (playerSelection === "paper" && computerSelection === "rock") {
-
-                playsc++;
-
-            } else if (playerSelection === "paper" && computerSelection === "scissors") {
-
-                compsc++;
-
-            } else if (playerSelection === "scissors" && computerSelection === "rock") {
-
-                compsc++;
-
-
-            } else if (playerSelection === "scissors" && computerSelection === "paper") {
-                playsc++;
-
-            }
-
-        }
-
-
-        function game() {
-
-
-            for(let i =0; i<5; i++) {
-                
-            let playerSelection = prompt("Rock, paper or scissors?").toLowerCase();
-            let computerSelection = computerPlay();
-            
-            playRound(playerSelection, computerSelection); 
-                
-            }
-            
-            if (playsc > compsc) {
-
-                    console.log("You beat the computer!");
-                } else if (playsc === compsc) {
-
-                    console.log("Both drew!");
-
-                } else {
-
-                    console.log("Computers are better!")
-                }
-
-
-        }
-        
-        game();
-        
-        
-
-
-    </script>
-
-
+    <script src="script.js"></script>
 </body>
 
 </html>

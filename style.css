@@ -1,0 +1,64 @@
+body {
+    
+    margin: 0;
+    background-image: url(img/wood.jpg);
+    outline: none;
+    
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
+    text-align: center;
+    list-style: none;
+}
+
+h1 {
+    
+    color: white;
+    
+}
+
+.score{
+    
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    
+    
+}
+
+#playerScore{
+    width: 40%;
+    display: inline-block;
+    color: white;
+    font-size: 1.6em;
+    
+}
+
+#computerScore{
+    width: 40%;
+    display: inline-block;
+    color: white;
+    font-size: 1.6em;
+    
+}
+
+
+img {
+    
+    height: 180px;
+    width: 180px;
+    display: inline-block;
+    margin-left: 180px;
+    margin-top: 170px;
+    outline: none;
+    
+}
+
+img:hover{
+    
+    cursor: pointer;
+}
